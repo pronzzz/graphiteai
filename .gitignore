@@ -1,0 +1,30 @@
+# General
+.DS_Store
+*.log
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Python Environments
+venv/
+env/
+.env
+
+# Model Weights & Large Data
+# Assuming we don't want to track large weight files if they are downloaded
+backend/model/weights.pth
+*.pth
+*.pt
+
+# Datasets
+training/datasets/
+facades/
+
+# IDEs
+.vscode/
+.idea/
+
+# Node/Frontend (if applicable in future, though mostly vanilla now)
+node_modules/
+dist/
+build/

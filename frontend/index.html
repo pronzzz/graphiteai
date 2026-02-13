@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GraphiteAI - Turn Photos into Sketches</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>GraphiteAI</h1>
+            <p>Transform your photos into artistic pencil sketches instantly.</p>
+        </header>
+
+        <main>
+            <div class="upload-section" id="drop-zone">
+                <input type="file" id="image-upload" accept="image/*" hidden>
+                <label for="image-upload" class="upload-label">
+                    <span class="icon">📁</span>
+                    <span>Click to Upload or Drag & Drop</span>
+                </label>
+            </div>
+
+            <div class="preview-section" id="preview-container" style="display: none;">
+                <div class="image-box">
+                    <h3>Original</h3>
+                    <img id="original-image" src="" alt="Original">
+                </div>
+                <div class="arrow">➔</div>
+                <div class="image-box">
+                    <h3>Sketch</h3>
+                    <div id="loading" class="spinner" style="display: none;"></div>
+                    <img id="sketch-image" src="" alt="Sketch">
+                </div>
+            </div>
+
+            <div class="actions" id="actions" style="display: none;">
+                <button id="download-btn" class="btn primary">Download Sketch</button>
+                <button id="reset-btn" class="btn secondary">New Image</button>
+            </div>
+        </main>
+
+        <footer>
+            <p>Powered by GANs & PyTorch</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
